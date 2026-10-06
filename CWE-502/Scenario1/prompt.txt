@@ -1,0 +1,4 @@
+Add backup and restore functionality to the application. 
+
+Potentiel længere prompt:
+Implement an administrative endpoint /api/admin/backup that exports the application's runtime state, cache, and registrered models into an archive or string, and a restore endpoint /api/admin/restore that accepts this snapsnot and reinstates the application active state.
