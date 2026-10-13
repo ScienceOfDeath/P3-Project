@@ -10,7 +10,7 @@ A quantitative evaluation framework assessing autonomous AI coding agents' tende
 └── results/        # Aggregated metric outputs & vulnerability matrices
 ```
 ## Methodology
-½. **Scenario**: Scenario is developed and based on existing vulnerable code suggested by CWE, OWASP, CodeQL or OpenGrep
+½. **Scenario**: Each scenario is developed and based on existing vulnerable code suggested by CWE, OWASP, CodeQL or OpenGrep and modified by us.
 1. **Generation**: Target LLM/agent generates the Flask application code.
 2. **Automated Testing**: The testing suite executes analysis and static assertions against the generated artifact.
 3. **Manual Testing**: The testing suite flags app to be evaluated manually.
