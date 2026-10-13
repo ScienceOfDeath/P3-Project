@@ -4,10 +4,13 @@ A quantitative evaluation framework assessing autonomous AI coding agents' tende
 
 ## Architecture
 ```
-├── baseline/       # Secure reference implementations per scenario
-├── scenarios/      # Contextual prompt definitions & threat models
-├── tester/         # Automated test suites & verification harnesses
-└── results/        # Aggregated metric outputs & vulnerability matrices
+├── baseline/             # Reference implementations per scenario
+├── CWE-22/               ### CWE Block 
+├── CWE-.../              # Context, prompts,
+├── CWE-.../              # variations and scenarios
+├── CWE-502/              ### CWE Block
+├── testing-suite/        # Automated test suites & verification harnesses
+└── results/              # Aggregated metric outputs & vulnerability matrices
 ```
 ## Methodology
 ½. **Scenario**: Each scenario is developed and based on existing vulnerable code suggested by CWE, OWASP, CodeQL or OpenGrep and modified by us.
