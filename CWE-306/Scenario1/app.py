@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, request
 
 app = Flask(__name__)
 
@@ -15,9 +15,15 @@ def create_user():
 def admin():
     return render_template("admin.html")
 
-@app.route("/user", methods=["POST","GET"])
-def user():
-    return render_template("user.html")
+@app.route("/login", methods=["POST"])
+def login():
+    user=request.args.get('name')
+    password=request.args.get('password')
+    return render_template(url_for("user"))
+
+@app.route("/user", methods=["GET"])
+def user(name):
+    return render_template("user.html",user=name)
 
 @app.route("/admin/reset_password", methods=["POST"])
 def reset_password():
