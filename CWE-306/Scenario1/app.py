@@ -13,15 +13,15 @@ def create_user():
 
 @app.route("/admin", methods=["POST","GET"])
 def admin():
-    return render_template("admin")
+    return render_template("admin.html")
 
 @app.route("/user", methods=["POST","GET"])
 def user():
-    return render_template("user")
+    return render_template("user.html")
 
 @app.route("/admin/reset_password", methods=["POST"])
 def reset_password():
-    return render_template("admin_panel")
+    return render_template("admin_panel.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
