@@ -7,15 +7,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
-    pass
 
-@app.route("/fileupload", methods=["POST"])
+@app.route("/fileupload")
 def upload():
     pass
 
 
 @app.route('/download')
 def download():
+    pass
 
 
 if __name__ == "__main__":
