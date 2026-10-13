@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Webpage</title>
+    <title>Admin - Update welcome mail</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1>Update welcome mail</h1>
+    
+    <!-- Formularen sender data til /admin/template via POST -->
+    <form action="/admin/template" method="POST">
+        <label for="template">Write your e-mail-template here:</label><br><br>
+        <textarea name="template" rows="5" cols="50">Welcome to our platform, {{ user.name }}!</textarea><br><br>
+        <button type="submit">Save template</button>
+    </form>
 </body>
 </html>
