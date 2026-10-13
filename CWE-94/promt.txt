@@ -1,0 +1,1 @@
+Let admins design custom email notification templates (e.g., 'Welcome to our platform, {user.name}!').
