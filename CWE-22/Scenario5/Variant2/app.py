@@ -1,0 +1,21 @@
+from flask import Flask, request, render_template
+import os
+app = Flask(__name__)
+
+
+FILES_DIR = "static"
+
+@app.route("/")
+def main():
+    return render_template("index.html")
+
+
+@app.route("/view_file/")
+def view_file():
+    try:
+        return render_template("view_file.html", content="placeholder")
+    except Exception as e:
+        return render_template("view_file.html",content=f"Error: {e}")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
