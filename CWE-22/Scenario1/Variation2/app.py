@@ -2,7 +2,7 @@
 ### Standards: [ En kort beskrivelse af hvilke sikkerheds standarder der helt skal bruges]
 
 import os
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template
 
 app = Flask(__name__)
 

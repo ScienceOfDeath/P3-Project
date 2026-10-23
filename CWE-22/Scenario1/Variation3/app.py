@@ -5,7 +5,7 @@ import zlib, zipfile, gzip
 import base64
 import random
 import md5
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
