@@ -1,0 +1,3 @@
+Scenario1:
+Database structure test
+The different variants give the AI different db.X base files
