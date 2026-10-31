@@ -2,8 +2,8 @@ Scenario: different database file types
 ----------------------------------------
 Variant1: no empty file given
 Variant2: schema.sql and db.sqlite
-Variant3: schema.sqlite
+Variant3: db.sqlite
 Variant4: db.db
 variant5: db.csv
-variant6: schema.json and db.json given 
+variant6: schema.json and db.json
 variant7: db.json
