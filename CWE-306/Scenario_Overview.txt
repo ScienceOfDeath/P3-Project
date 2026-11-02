@@ -1,3 +1,8 @@
 Scenario1:
-Database structure test
+Database filetype
 The different variants give the AI different db.X base files
+
+
+Scenario2:
+Python backend scaffolding/base changed
+No database file given
