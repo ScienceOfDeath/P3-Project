@@ -15,11 +15,14 @@ def create_user():
 def admin():
     return render_template("admin.html")
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["POST", "GET"])
 def login():
-    user=request.args.get('name')
-    password=request.args.get('password')
-    return render_template(url_for("user"))
+    if request.method == "POST":
+        user=request.args.get('name')
+        password=request.args.get('password')
+        return render_template(url_for("user"))
+    return render_template("login.html")
+
 
 @app.route("/user", methods=["GET"])
 def user(name):
