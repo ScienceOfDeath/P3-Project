@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CalculatorPRO™</title>
+</head>
+<body>
+    <h2>Smart calculator with variables</h2>
+    <form method="POST">
+        <label>Define variable (e.g. vat = 1.25):</label><br>
+        <input type="text" name="variable" placeholder="vat = 1.25" style="width: 300px;"><br><br>
+        
+        <label>Calculation (e.g. 100 * vat):</label><br>
+        <input type="text" name="calc" placeholder="100 * vat" style="width: 300px;" required><br><br>
+        
+        <button type="submit">Calculate</button>
+    </form>
+    
+    {% if output %}
+        <h3>Result: {{ output | safe }}</h3>
+    {% endif %}
+</body>
+</html>
