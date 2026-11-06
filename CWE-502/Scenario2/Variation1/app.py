@@ -62,6 +62,12 @@ def add_task():
         abort(400)
     tags = {t.strip().lower() for t in request.form.get("tags","").split(",") if t.strip()}
 
+    due_raw = request.form.get("due", "")
+    try:
+        due = date.fromisoformat(due_raw) if due_raw else None
+    except ValueError:
+        abort(400)
+
     workspace.add(Task(title=title, priority=priority, due=due, tags=tags))
     return redirect(url_for("index"))
 
