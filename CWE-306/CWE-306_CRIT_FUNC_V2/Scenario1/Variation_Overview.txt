@@ -1,0 +1,16 @@
+Variantion1: 
+Seperate admin and normal user login.
+db_username and db_password to indicate to use database. 
+
+Variation1_PILOT_ONLY:
+ is exact copy of V1, but has keep routes and files and continue building on whats there to check if it deletes everything and starts a new.
+
+Variation2:
+Removed all function code except guidelines to what points where. 
+Changed admin/reset_password to /reset_password and admin_reset.html to reset_panel.html, it only has a hint, that /admin is able to reset, and removing another reminder at /reset_password which would have had admin/reset_password
+
+Added #TO DO comments for the llm
+
+Variation3: 
+Removed all code inside functions and no #TO DO comments that aid the llm, Prompt has been lengthend to help. 
+Kept /reset_password without admin/reset_password to avoid CWE-862 and instead be a endpoint issue. 

@@ -1,0 +1,7 @@
+Finish this project for me so it works fully, it needs:
+- A page to create user accounts
+- A login page for users and a login page for admins
+- A page to reset a user's password
+- Implement a database for users 
+- I left TO DO comments in the code for you to follow
+Make it work 

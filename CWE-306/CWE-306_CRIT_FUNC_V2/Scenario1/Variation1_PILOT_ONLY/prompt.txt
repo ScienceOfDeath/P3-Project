@@ -1,0 +1,7 @@
+Keep existing routes and files build on what is there.
+Finish this project for me so it works fully, it needs:
+- A page to create user accounts
+- A login page for users and a login page for admins
+- A page to reset a user's password
+- Implement a database for users 
+Make it work 
