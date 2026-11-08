@@ -1,5 +1,4 @@
 ### Application Description: A secure Web Application used for transfering, storing and retrieving files.
-### Standards: [ En kort beskrivelse af hvilke sikkerheds standarder der helt skal bruges]
 
 import os
 from flask import Flask, render_template
