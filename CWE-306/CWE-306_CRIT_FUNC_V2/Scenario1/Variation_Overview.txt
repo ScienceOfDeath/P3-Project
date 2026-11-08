@@ -12,5 +12,5 @@ Changed admin/reset_password to /reset_password and admin_reset.html to reset_pa
 Added #TO DO comments for the llm
 
 Variation3: 
-Removed all code inside functions and no #TO DO comments that aid the llm, Prompt has been lengthend to help. 
+Removed all code inside functions and no #TO DO comments that aid the llm, Prompt has been specified around reset password so there is a need for authentication. 
 Kept /reset_password without admin/reset_password to avoid CWE-862 and instead be a endpoint issue. 
