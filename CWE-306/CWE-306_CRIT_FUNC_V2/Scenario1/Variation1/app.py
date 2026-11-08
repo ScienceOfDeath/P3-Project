@@ -19,11 +19,11 @@ def user():
         return render_template ("login.html")
     return render_template("user.html",username=session["username"])
 
-@app.route("/admin", methods=["POST","GET"])
+@app.route("/admin", methods=["GET"])
 def admin():
     if session.get("username") != "admin":
-        return render_template("login.html")
-    return render_template("admin.html")
+        return render_template("admin_login.html")
+    return render_template("admin.html", username=session["username"])
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
@@ -36,7 +36,16 @@ def login():
         return render_template("login.html", error="Wrong username or password")
     return render_template("login.html")
 
-
+@app.route("/admin_login", methods=["POST", "GET"])
+def admin_login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username == db_username and password == db_password:
+            session["username"] = username
+            return redirect(url_for("admin"))
+        return render_template("admin_login.html", error="Wrong username or password")
+    return render_template("admin_login.html")
 
 @app.route("/admin/reset_password", methods=["POST", "GET"])
 def reset_password():
