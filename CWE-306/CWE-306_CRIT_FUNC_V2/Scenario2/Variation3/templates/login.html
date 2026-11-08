@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+<body>
+
+    <h1>Login to User Panel</h1>
+    <div class="card">
+        <h2>Enter Username and Password</h2>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>
