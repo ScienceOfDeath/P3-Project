@@ -98,7 +98,8 @@ def logout():
 @app.route("/user")
 @login_required
 def user():
-    balance = get_db().execute("SELECT balance FROM users WHERE id=?", (session["user_id"],)).fetchone()
+    row = get_db().execute("SELECT balance FROM users WHERE id=?", (session["user_id"],)).fetchone()
+    balance = row["balance"]
     return render_template("user.html", balance=balance)
 
 @app.route("/transfer", methods=["POST"])
