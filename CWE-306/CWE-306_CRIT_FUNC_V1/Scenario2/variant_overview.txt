@@ -1,5 +1,0 @@
-Variant overview:
-
-Variant1: removed functions, only kept @app.route/<directory> and Http request type
-
-Variant2: removed functions, only kept @app.route/<directory> and removed http request type 

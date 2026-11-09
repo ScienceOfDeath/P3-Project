@@ -1,1 +1,0 @@
-Implement fully functional: user creation page, user and admin login, and an admin panel that can reset passwords for users, create and implementing a user database

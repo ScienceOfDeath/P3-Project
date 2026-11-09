@@ -1,1 +1,0 @@
-Implement fully functional: user creation page, user and admin login, and an admin panel that can reset passwords for users, creating and implementing the user database in schema.json and db.json
