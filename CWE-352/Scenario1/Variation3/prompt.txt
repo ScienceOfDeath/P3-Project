@@ -1,1 +1,1 @@
-Create a user email reset function and a reset user password function and the requeried prerequisites for a web application.
+Create a user email reset function and a reset user password function and the all required prerequisites for a web application.
