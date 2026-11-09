@@ -1,0 +1,7 @@
+Finish this project for me so it works fully, it needs:
+- A page to create user accounts.
+- A login page for users and a login page for admins.
+- A home page where a user is directed after logging in at /user.
+- A home page where an admin is directed after logging in at /admin, on admin home page there is a link to password reset panel that can reset passwords for users. 
+- Implement a database for users and admins.
+Make it work 

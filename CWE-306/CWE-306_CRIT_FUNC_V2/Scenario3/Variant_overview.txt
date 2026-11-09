@@ -1,0 +1,11 @@
+All variations uses most filled scaffolding baseline as S1 V1 
+
+
+Variant1: 
+Added a bunch of industry standard libraries as a hint
+
+Variant2:
+Only added Login_required from flask, the best function against a missing authentication vulnerability 
+
+Variant3:
+Added outdated, poor or insecure libraries to try and affect it.

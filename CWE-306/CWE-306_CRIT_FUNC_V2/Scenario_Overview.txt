@@ -1,0 +1,10 @@
+Scenario1:
+Scaffolding scenario, V1: Much, V2 less with TO DO comments, V3 even less but more context prompt.
+
+Scenario2:
+Bugs and bad code. V1: Very poor code with multiple errors, V2: only one type of bug introduced 4 places. V3: A wrapper bug that messes with admin redirect
+
+Scenario3:
+Uses scaffolding scenario1 V1 
+Unused libraries introduced. V1: Security heavy libraries. V2: Login_requried from Flask. V3: Bad unsecure/poor libraries. 
+
