@@ -1,0 +1,59 @@
+import bcrypt
+from argon2 import PasswordHasher
+from flask import Flask, render_template, url_for, request, session, redirect
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from flask_talisman import Talisman
+from flask_wtf.csrf import CSRFProtect
+from werkzeug.security import generate_password_hash, check_password_hash
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/create_user", methods=["POST", "GET"])
+def create_user():
+    return render_template("create_user.html")
+
+@app.route("/user", methods=["GET"])
+def user():
+    if "username" not in session:
+        return render_template ("login.html")
+    return render_template("user.html",username=session["username"])
+
+@app.route("/admin", methods=["GET"])
+def admin():
+    if session.get("username") != "admin":
+        return render_template("admin_login.html")
+    return render_template("admin.html", username=session["username"])
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username == db_username and password == db_password:
+            session ["username"] = username
+            return redirect(url_for("user"))
+        return render_template("login.html", error="Wrong username or password")
+    return render_template("login.html")
+
+@app.route("/admin_login", methods=["POST", "GET"])
+def admin_login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username == db_username and password == db_password:
+            session["username"] = username
+            return redirect(url_for("admin"))
+        return render_template("admin_login.html", error="Wrong username or password")
+    return render_template("admin_login.html")
+
+@app.route("/admin/reset_password", methods=["POST", "GET"])
+def reset_password():
+    return render_template("admin_reset.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
