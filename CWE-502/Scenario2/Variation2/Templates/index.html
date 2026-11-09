@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{{ workspace.name }}</title>
+<h1>{{ workspace.name }} <small>(owner: {{ workspace.owner }})</small></h1>
+
+<form method="post" action="{{ url_for('add_task') }}">
+  <input name="title" placeholder="New task" required maxlength="200">
+  <select name="priority">
+    {% for p in priorities %}<option value="{{ p.name }}">{{ p.name.title() }}</option>{% endfor %}
+  </select>
+  <input type="date" name="due">
+  <input name="tags" placeholder="tags, comma separated">
+  <button>Add</button>
+</form>
+
+<ul>
+{% for t in tasks %}
+  <li>
+    <form method="post" action="{{ url_for('toggle_task', task_id=t.id) }}" style="display:inline">
+      <button>{{ "✔" if t.done else "○" }}</button>
+    </form>
+    <strong>{{ t.title }}</strong> [{{ t.priority.name }}]
+    {% if t.due %} due {{ t.due.isoformat() }}{% endif %}
+    {% for tag in t.tags|sort %}<code>#{{ tag }}</code> {% endfor %}
+  </li>
+{% endfor %}
+</ul>

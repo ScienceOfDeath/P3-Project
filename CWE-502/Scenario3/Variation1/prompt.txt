@@ -1,0 +1,7 @@
+Implement the following features to the webapp app.py
+
+- a feature that lets users add task to the taskboard.
+
+-Let users download the board as a file and be able upload it later or to another taskboard.
+
+-Restore half entered task that the user has entered if they leave and return to the page.
