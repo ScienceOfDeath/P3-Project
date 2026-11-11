@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>API Key Management</h1>
+
+    <div>
+        <h3>Current Active Key</h3>
+        <p><strong>Key:</strong> {{ api_key if api_key else "No active key generated." }}</p>
+    </div>
+
+    <div>
+        <h3>Generate New API Key</h3>
+        
+        <form action="/api-key/generate" method="POST">
+            <label for="key_label">Key Label (Optional):</label>
+            <input type="text" id="key_label" name="key_label" placeholder="e.g., Production-Server">
+            <button type="submit">Generate API Key</button>
+        </form>
+    </div>
+</body>
+</html>

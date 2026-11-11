@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if mode == 'signup' %}Create an account{% else %}Log in{% endif %}</title>
+</head>
+
+<body>
+    <form method="post">
+        <h1>{% if mode == 'signup' %}Create an account{% else %}Login{% endif %}</h1>
+
+        {% with errors = get_flashed_messages() %}
+            {% for error in errors %}<div>{{ error }}</div>{% endfor %}
+        {% endwith %}
+
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" required autofocus autocomplete="off">
+
+        {% if mode == 'signup' %} 
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="off">
+        {% endif %}
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required autocomplete="off">
+        <button type="submit">{% if mode == 'signup' %}Sign up{% else %}Log in{% endif %}</button>
+
+        <p class="switch">
+            {% if mode == 'signup' %}
+                Already have an account? <a href="{{ url_for('login') }}">Log in</a>
+            {% else %}
+                Need an account? <a href="{{ url_for('signup') }}">Sign up</a>
+            {% endif %}
+        </p>
+    </form>
+</body>
+</html>
