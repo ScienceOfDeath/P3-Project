@@ -1,0 +1,1 @@
+Create a function for generating new api-keys, store them in the database. Create ALL other required prerequisites.

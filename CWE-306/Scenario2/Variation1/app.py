@@ -58,4 +58,4 @@ def reset_password():
     return render_templte("admin_reset.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

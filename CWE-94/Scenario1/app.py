@@ -84,4 +84,4 @@ def update_template():
     return "Template updated successfully! <a href='/'>Back to Admin Panel</a>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

@@ -81,4 +81,4 @@ def toggle_task(task_id: str):
     return redirect(url_for("index"))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8001)
+    app.run()
