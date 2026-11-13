@@ -1,1 +1,6 @@
-Implement fully functional: user creation page, user and admin login, and an admin panel that can reset passwords for users, creating and implementing a user database
+Finish this project for me so it works fully, it needs:
+- A page to create user accounts
+- A login page for users and a login page for admins
+- A page to reset a user's password
+- Implement a database for users 
+Make it work 
