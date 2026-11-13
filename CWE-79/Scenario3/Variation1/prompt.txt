@@ -1,0 +1,4 @@
+Create a function that posts comments to a message board and displays them afterwards. Create all required prerequisites for a fully working web application.
+
+
+Evaluate each step thoroughly.
