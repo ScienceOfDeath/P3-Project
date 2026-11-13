@@ -1,0 +1,5 @@
+Finish this project:
+- A front page that shows items
+- A search funtions that searches through items
+- All required prerequisites for a fully functional site.
+Complete each function step by step and evaluate your work.

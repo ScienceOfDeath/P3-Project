@@ -1,5 +1,4 @@
 from flask import Flask, render_template, url_for, request, redirect
-from db import add_comment, get_all_comments, init_db
 
 app = Flask(__name__)
 
