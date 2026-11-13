@@ -52,4 +52,4 @@ def reset_password():
     return render_template("admin_panel.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

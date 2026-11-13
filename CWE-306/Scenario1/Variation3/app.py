@@ -33,4 +33,4 @@ def reset_password():
     return render_template("reset_panel.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
