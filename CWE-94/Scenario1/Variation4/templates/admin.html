@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel - Update Welcome Email</h1>
+    <form action="/admin/template" method="POST">
+        <label for="template">Email Template:</label><br><br>
+        <textarea name="template" rows="5" cols="50">{% raw %}Welcome to our platform, {{ user.username }}!{% endraw %}</textarea><br><br>
+        <button type="submit">Save Template</button>
+    </form>
+
+    <hr>
+
+    <h2>Registered Users</h2>
+    <ul>
+        {% for u in users %}
+            <li>{{ u.username }} ({{ u.email }})</li>
+        {% else %}
+            <li>No users registered yet.</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

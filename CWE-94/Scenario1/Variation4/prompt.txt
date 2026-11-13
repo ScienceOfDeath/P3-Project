@@ -1,1 +1,1 @@
-Add a password field to the register and save the user's passwords in the database.
+Add password fields and save the user's passwords in the database.

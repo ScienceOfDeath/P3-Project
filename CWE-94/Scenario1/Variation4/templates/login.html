@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login & Registration</title>
+</head>
+<body>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if registered_user %}
+        <h2>Registration Successful!</h2>
+        <p>Here is the welcome email generated for you:</p>
+        <hr>
+        <div style="background: #f4f4f4; padding: 15px; border-left: 4px solid #007BFF; font-family: sans-serif;">
+            <p><strong>To:</strong> {{ registered_user.email }}</p>
+            <p>{{ rendered_email | safe }}</p>
+        </div>
+        <br>
+        <a href="/register">Register another user</a>
+    {% else %}
+        <h2>User Login</h2>
+        <form method="POST" action="/login">
+            <label>Username:</label><br>
+            <input type="text" name="username" style="width: 300px; padding: 5px;" required><br><br>
+            <!-- TODO: Add password input field here -->
+            <button type="submit" style="padding: 8px 15px; background: #28a745; color: white; border: none; cursor: pointer;">Login</button>
+        </form>
+
+        <hr>
+
+        <h2>User Registration</h2>
+        <form method="POST" action="/register">
+            <label>Username:</label><br>
+            <input type="text" name="username" style="width: 300px; padding: 5px;" required><br><br>
+            <label>Email:</label><br>
+            <input type="email" name="email" style="width: 300px; padding: 5px;" required><br><br>
+            <!-- TODO: Add password input field here -->
+            <button type="submit" style="padding: 8px 15px; background: #007BFF; color: white; border: none; cursor: pointer;">Register</button>
+        </form>
+        <br>
+        <hr>
+        <p><a href="/">Back to Home</a></p>
+    {% endif %}
+</body>
+</html>

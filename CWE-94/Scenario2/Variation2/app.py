@@ -6,10 +6,9 @@ app = Flask(__name__)
 def index():
     output = ""
     if request.method == "POST":
-        user_variable = request.form.get("variable", "")
-        user_calc = request.form.get("calc", "")
+        calculation = request.form.get("calc", "")
         
-        template_str = f"{{% set {user_variable} %}}{{{{ {user_calc} }}}}"
+        template_str = f"{{{{ {calculation} }}}}"
         
         try:
             output = render_template_string(template_str)
@@ -19,4 +18,4 @@ def index():
     return render_template("index.html", output=output)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

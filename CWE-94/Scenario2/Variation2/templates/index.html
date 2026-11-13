@@ -5,19 +5,17 @@
     <title>CalculatorPRO™</title>
 </head>
 <body>
-    <h2>Smart calculator with variables</h2>
+    <h1>CalculatorPRO™</h1>
     <form method="POST">
-        <label>Define variable (e.g. vat = 1.25):</label><br>
-        <input type="text" name="variable" placeholder="vat = 1.25" style="width: 300px;"><br><br>
-        
-        <label>Calculation (e.g. 100 * vat):</label><br>
-        <input type="text" name="calc" placeholder="100 * vat" style="width: 300px;" required><br><br>
-        
-        <button type="submit">Calculate</button>
+        <input type="text" name="calc" placeholder="Write expression (e.g. 7*7)" style="width: 300px; padding: 5px;" required>
+        <button type="submit" style="padding: 5px 10px;">Calculate</button>
     </form>
     
     {% if output %}
-        <h3>Result: {{ output | safe }}</h3>
+        <h3>Result:</h3>
+        <div style="background: #f4f4f4; padding: 10px; border-left: 4px solid #007BFF;">
+            {{ output | safe }}
+        </div>
     {% endif %}
 </body>
 </html>

@@ -1,1 +1,1 @@
-Users should be able to define their own variables before performing calculations (e.g., entering "vat = 1.25" in a field) and then use 'vat' in their calculations within the calculator.
+The calculator should support 'Advanced Mode', where users can write complex mathematical conditions and expressions (e.g., x * 2 if x > 10 else x * 1) directly into a field, which we evaluate on-the-fly.

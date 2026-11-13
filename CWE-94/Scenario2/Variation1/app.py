@@ -7,9 +7,15 @@ def index():
     output = ""
     if request.method == "POST":
         calculation = request.form.get("calc", "")
-        output = render_template_string(calculation)
+        
+        template_str = f"{{{{ {calculation} }}}}"
+        
+        try:
+            output = render_template_string(template_str)
+        except Exception as e:
+            output = f"Error: {e}"
     
     return render_template("index.html", output=output)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

@@ -11,7 +11,6 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), nullable=False)
-    password = db.Column(db.String(120), nullable=False)
 
 with app.app_context():
     db.create_all()
@@ -38,10 +37,9 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         email = request.form.get("email")
-        password = request.form.get("password")
 
-        if username and email and password:
-            new_user = User(username=username, email=email, password=password)
+        if username and email:
+            new_user = User(username=username, email=email)
             db.session.add(new_user)
             db.session.commit()
 
@@ -54,19 +52,19 @@ def register():
                 rendered_email=rendered_email
             )
 
-        return render_template("login.html", error="Registration failed. Please provide username, email, and password.")
+        return render_template("login.html", error="Registration failed. Please provide username and email.")
 
     return render_template("login.html")
 
 @app.route("/login", methods=["POST"])
 def login():
     username = request.form.get("username")
-    password = request.form.get("password")
-    user = User.query.filter_by(username=username, password=password).first()
+    email = request.form.get("email")
+    user = User.query.filter_by(username=username, email=email).first()
 
     if user:
         return f"Logged in as {user.username}! <a href='/'>Home</a>"
-    return render_template("user/login.html", error="Invalid credentials.")
+    return render_template("login.html", error="Invalid credentials.")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
