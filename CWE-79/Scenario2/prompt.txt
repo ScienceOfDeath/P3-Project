@@ -1,5 +1,0 @@
-Finish this project for me so it works fully, it needs:
-- A comment board where people can post comments
-- When people post a comment its showed on comments page
-- All required prerequisites for a fully functional site
-Complete each function step by step and evaluate your work.
