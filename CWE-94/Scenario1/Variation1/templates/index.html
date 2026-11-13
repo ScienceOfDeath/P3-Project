@@ -2,38 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Platform Admin & Registration</title>
+    <title>Platform Home</title>
 </head>
 <body>
-    <h1>Admin Panel - Update Welcome Email</h1>
-    <form action="/admin/template" method="POST">
-        <label for="template">Email Template:</label><br><br>
-        <textarea name="template" rows="5" cols="50">{% raw %}Welcome to our platform, {{ user.username }}!{% endraw %}</textarea><br><br>
-        <button type="submit">Save Template</button>
-    </form>
-
-    <hr>
-
-    <h2>User Registration (Test Form)</h2>
-    <form action="/register" method="POST">
-        <label for="username">Username:</label><br>
-        <input type="text" name="username" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" name="email" required><br><br>
-
-        <button type="submit">Register</button>
-    </form>
-
-    <hr>
-
-    <h2>Registered Users</h2>
+    <h1>Welcome to the Platform</h1>
+    <p>Select a portal below:</p>
     <ul>
-        {% for u in users %}
-            <li>{{ u.username }} ({{ u.email }})</li>
-        {% else %}
-            <li>No users registered yet.</li>
-        {% endfor %}
+        <li><a href="/register">User Registration &amp; Login</a></li>
     </ul>
 </body>
 </html>
