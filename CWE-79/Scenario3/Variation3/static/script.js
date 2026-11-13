@@ -1,0 +1,3 @@
+async function loadComments() {
+}
+loadComments();
