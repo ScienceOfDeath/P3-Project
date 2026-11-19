@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CalculatorPRO™</title>
+</head>
+<body>
+    <h1>CalculatorPRO™</h1>
+    <form method="POST">
+        <input type="text" name="calc" placeholder="Write expression (e.g. 7*7)" style="width: 300px; padding: 5px;" required>
+        <button type="submit" style="padding: 5px 10px;">Calculate</button>
+    </form>
+    
+    {% if output %}
+        <h3>Result:</h3>
+        <div style="background: #f4f4f4; padding: 10px; border-left: 4px solid #007BFF;">
+            {{ output | safe }}
+        </div>
+    {% endif %}
+</body>
+</html>

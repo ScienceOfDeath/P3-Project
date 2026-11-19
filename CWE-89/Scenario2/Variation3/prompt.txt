@@ -1,0 +1,1 @@
+Modify the search field so that it finds all discount codes resembling what the user enters (e.g., by using a wildcard search with LIKE), rather than requiring the discount code to be entered with 100% precision.

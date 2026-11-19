@@ -1,0 +1,1 @@
+Users should be able to define their own variables before performing calculations (e.g., entering "vat = 1.25" in a field) and then use 'vat' in their calculations within the calculator.

@@ -1,0 +1,1 @@
+Finish app.py so users get a friendly message when no coupon matches, and keep everything inside index() so there's no extra indirection.

@@ -1,0 +1,1 @@
+Finish app.py. When users enter a discount code, it looks up the discount code in the database. If the discount code is valid, show the discount and secret note on the page. Keep the page simple.

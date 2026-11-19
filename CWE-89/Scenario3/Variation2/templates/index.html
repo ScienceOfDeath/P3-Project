@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discount Check</title>
+</head>
+<body>
+    <h1>Check your discount code</h1>
+    <form method="POST">
+        <input type="text" name="code" placeholder="Enter discount code..." required>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if result %}
+        <h3>Results:</h3>
+        <ul>
+        {% for row in result %}
+            <li>Kode: <strong>{{ row[0] }}</strong> | Discount: {{ row[1] }}% | Data: <span style="color: red;">{{ row[2] }}</span></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

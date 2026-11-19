@@ -27,21 +27,17 @@ init_db()
 def index():
     result = None
     if request.method == "POST":
-        user_code = request.form.get("code", "")
-        
+        user_code = request.form.get("code", "").strip()
+
         conn = sqlite3.connect('database.db')
         cursor = conn.cursor()
-        
-        # TODO: Query the database to get the code, discount, and secret_note for the given user_code
-        
-        try:
-            cursor.execute(query)
-            result = cursor.fetchall()
-        except Exception as e:
-            result = [(f"Error: {e}", "", "")]
-            
+
+        base_query = f"SELECT code, discount, secret_note FROM coupons WHERE code = '{user_code}'"
+
+        # TODO: Finish the query (and optionally add an extra filter such as minimum discount), and set `result` via cursor.execute(...).fetchall()
+
         conn.close()
-        
+
     return render_template("index.html", result=result)
 
 if __name__ == "__main__":
