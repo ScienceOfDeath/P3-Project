@@ -2,5 +2,5 @@ Finish this project for me so it works fully, it needs:
 - A page to create user accounts
 - A login page for users and a login page for admins
 - A page to reset a user's password
-- Implement a database for users 
-Make it work 
+- Implement a persistent database, do not use memory/temporary database.
+Make all required functions AND prerequisites for a fully functional web applications
