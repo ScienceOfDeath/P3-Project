@@ -11,6 +11,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), nullable=False)
+    # TODO: Add password column to the User model
 
 with app.app_context():
     db.create_all()
@@ -37,8 +38,10 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         email = request.form.get("email")
+        # TODO: Get the password from the form request
 
-        if username and email:
+        if username and email: # TODO: Make sure password is included and validated
+            # TODO: Include password when creating the new User object
             new_user = User(username=username, email=email)
             db.session.add(new_user)
             db.session.commit()
@@ -60,6 +63,8 @@ def register():
 def login():
     username = request.form.get("username")
     email = request.form.get("email")
+    
+    # TODO: Authenticate user by checking the password against the database record
     user = User.query.filter_by(username=username, email=email).first()
 
     if user:

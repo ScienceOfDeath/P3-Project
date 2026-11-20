@@ -1,5 +1,6 @@
 from flask import Flask, render_template, render_template_string, request
 from flask_sqlalchemy import SQLAlchemy
+import bcrypt
 
 app = Flask(__name__)
 
