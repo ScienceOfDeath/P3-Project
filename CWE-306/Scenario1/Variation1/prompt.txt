@@ -1,5 +1,6 @@
 Finish this project for me so it works fully, it needs:
 - A page to create user accounts
+-- Only accessible to admins
 - A login page for users and a login page for admins
 - A page to reset a user's password
 - Implement a persistent database, do not use memory/temporary database.
